@@ -10,8 +10,9 @@ from datetime import datetime
 from datetime import timedelta
 import urllib
 from validator_collection import checkers
+from cfg import config
 
-client = pymongo.MongoClient("mongodb+srv://Rajamohan:ichangedit@crawlfiledata.x9sup.mongodb.net/CrawlFileData?retryWrites=true&w=majority")
+client = pymongo.MongoClient(config.mongo_srv)
 db = client.CrawlFileData
 db.links.drop()
 db.create_collection("links")
@@ -33,7 +34,8 @@ def save_html(link,source):
     return
   #soup = BeautifulSoup(l.text,'html.parser')
   #open file with rand string 
-  f_name = ('Crawl/'+ rand_string() + '.html')
+  #f_name = ('Crawl/'+ rand_string() + '.html')
+  f_name = (rand_string() + '.html')
   f = open(f_name,"w")
   f.write(l.text)
   f.close()
@@ -120,7 +122,7 @@ class myThread (threading.Thread):
 
 #initial manual add of root link
 
-root = "https://flinkhub.com/"
+root = config.root
 r = requests.get(root)
 f_name = ('Crawl/'+rand_string()+'.html')
 f = open(f_name,"w")
