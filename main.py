@@ -12,7 +12,7 @@ import urllib
 from validator_collection import checkers
 from cfg import config
 
-client = pymongo.MongoClient(config.mongo_srv)
+client = pymongo.MongoClient(config["mongo_srv"])
 db = client.CrawlFileData
 db.links.drop()
 db.create_collection("links")
@@ -122,7 +122,7 @@ class myThread (threading.Thread):
 
 #initial manual add of root link
 
-root = config.root
+root = config['root']
 r = requests.get(root)
 f_name = ('Crawl/'+rand_string()+'.html')
 f = open(f_name,"w")
