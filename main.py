@@ -151,7 +151,7 @@ collection.insert_one({
 
 while True:
 
-  f = open(links.txt', "a")
+  f = open('links.txt', "a")
   for link in soup.find_all('a'):
     links = link.get('href')
     links = urllib.parse.urljoin(root,links)
