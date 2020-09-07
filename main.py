@@ -7,9 +7,9 @@ import pymongo
 from datetime import datetime
 import urllib
 from cfg import config
-from utils import save_html
+from datab import save_html
 from utils import rand_string
-from database import crawl_html
+from utils import crawl_html
 
 client = pymongo.MongoClient(config["mongo_srv"])
 db = client.CrawlFileData
@@ -45,7 +45,7 @@ collection.insert_one({
 
 while True:
 
-  f = open('links.txt', "a")
+  #f = open('links.txt', "a")
   for link in soup.find_all('a'):
     links = link.get('href')
     links = urllib.parse.urljoin(root,links)
@@ -53,10 +53,10 @@ while True:
     if link_parse.netloc and link_parse.scheme and (not link_parse.fragment):
       if collection.find_one({"link": links})  == None:
         save_html(links,root)
-        f.write(links + '\n')
+        #f.write(links + '\n')
   
    
-  f.close()
+  #f.close()
 
 
   while True:
