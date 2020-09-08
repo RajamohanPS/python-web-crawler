@@ -8,7 +8,7 @@ from datetime import datetime
 import urllib
 from cfg import config
 from datab import save_html
-from utils import rand_string
+from datab import rand_string
 from utils import crawl_html
 
 client = pymongo.MongoClient(config["mongo_srv"])
@@ -19,8 +19,8 @@ collection = db.links
 
 root = config['root']
 r = requests.get(root)
-#f_name = ('Crawl/'+rand_string()+'.html')
-f_name = (rand_string()+'.html')
+f_name = ('Crawl/'+rand_string()+'.html')
+#f_name = (rand_string()+'.html')
 f = open(f_name,"w")
 f.write(r.text)
 f.close()

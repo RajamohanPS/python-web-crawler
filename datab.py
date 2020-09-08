@@ -1,12 +1,21 @@
 import requests
 import pymongo
+import random 
+import string
 from datetime import datetime 
 from cfg import config
-from utils import rand_string
 
 client = pymongo.MongoClient(config["mongo_srv"])
 db = client.CrawlFileData
 collection = db.links
+
+
+def rand_string(length = 10):
+  #change length as required or input
+  letters = string.ascii_lowercase
+  result_str = ''.join(random.choice(letters) for i in range(length))
+  
+  return (result_str)
 
 def save_html(link,source):
   try:
@@ -20,9 +29,10 @@ def save_html(link,source):
   status = response.status_code
 
 
-  #f_name = ('Crawl/'+ rand_string() + '.html')
+  
   if int(status) == 200:
-    f_name = (rand_string() + '.html')
+    f_name = ('Crawl/'+ rand_string() + '.html')
+    #f_name = (rand_string() + '.html')
     f = open(f_name,"w")
     f.write(l.text)
     f.close()

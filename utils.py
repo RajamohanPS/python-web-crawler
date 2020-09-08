@@ -1,7 +1,5 @@
 import requests
 import pymongo
-import random 
-import string
 from datetime import datetime
 from datetime import timedelta
 from bs4 import BeautifulSoup
@@ -17,12 +15,6 @@ collection = db.links
 root = config["root"]
 
 
-def rand_string(length = 10):
-  #change length as required or input
-  letters = string.ascii_lowercase
-  result_str = ''.join(random.choice(letters) for i in range(length))
-  
-  return (result_str)
 
 def crawl_html():
   days = timedelta(1)
