@@ -19,8 +19,8 @@ collection = db.links
 
 root = config['root']
 r = requests.get(root)
-f_name = ('Crawl/'+rand_string()+'.html')
-#f_name = (rand_string()+'.html')
+#f_name = ('Crawl/'+rand_string()+'.html')
+f_name = (rand_string()+'.html')
 f = open(f_name,"w")
 f.write(r.text)
 f.close()

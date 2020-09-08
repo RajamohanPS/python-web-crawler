@@ -28,11 +28,10 @@ def save_html(link,source):
   size = len(response.content)
   status = response.status_code
 
-
+  #f_name = ('Crawl/'+ rand_string() + '.html')
+  f_name = (rand_string() + '.html')
   
   if int(status) == 200:
-    f_name = ('Crawl/'+ rand_string() + '.html')
-    #f_name = (rand_string() + '.html')
     f = open(f_name,"w")
     f.write(l.text)
     f.close()

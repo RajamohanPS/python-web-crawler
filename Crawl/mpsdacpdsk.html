@@ -1,0 +1,530 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Explore Courses | Flinkhub Projects</title>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="/static/img/favicon.png" rel="icon">
+    <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="/static/vendor/aos/aos.css">
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/vendor/icofont/icofont.min.css">
+    <link rel="stylesheet" href="/static/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="/static/vendor/venobox/venobox.css">
+    <link rel="stylesheet" href="/static/vendor/remixicon/remixicon.css">
+    <link rel="stylesheet" href="/static/vendor/owl.carousel/assets/owl.carousel.min.css">
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="stylesheet" href="/static/css/custom.css?ts=08082020">
+
+    
+
+    
+    <!-- Facebook Pixel Code -->
+    <script type="text/javascript">
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+                            'https://connect.facebook.net/en_US/fbevents.js');
+             fbq('init', '639411533618615');
+             fbq('track', 'PageView');
+
+
+    </script>
+    <noscript>
+        <img
+                height="1"
+                width="1"
+                src="https://www.facebook.com/tr?id=639411533618615&ev=PageView&noscript=1"
+        />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
+
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+
+
+
+
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+        <div class="logo mr-auto">
+            <h1 class="text-light">
+                <a href="/"><span>Flinkhub</span></a>
+            </h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class=""><a href="/">Home</a></li>
+                <li><a href="/explore">Explore Projects</a></li>
+                <li class="drop-down">
+                    <a href="javascript:;">Upcoming Batches</a>
+                    <ul>
+                        <li><a href="/project/harshit-product-management">Cracking the PM Role</a></li>
+                        <li><a href="/project/become-data-scientist">Become a Data Scientist</a></li>
+                        <li><a href="/project/intro-quant-finance">Intro to Quantitative Finance</a></li>
+                        <li><a href="/project/satyam-datascience-decisiontrees">Decision Trees, Boosting &amp;
+                            Ensembles</a></li>
+                        <li><a href="/project/akshay-seo-for-beginners">Cracking SEO in 2020</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="https://communities.flinkhub.com" class="" target="_blank">
+                        Join Communities
+                    </a>
+                </li>
+
+                
+
+                <!-- <li><a href="/teach">Teach</a></li> -->
+
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->
+
+
+<main id="main">
+    <section id="features" class="features explore-container mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="section-title aos-init aos-animate mt-3" data-aos="fade-up">
+    <div class="row">
+        <div class="col">
+            <h2>Search</h2>
+            <p>
+                
+Explore
+
+            </p>
+        </div>
+
+        <div class="col-auto ml-auto d-flex flex-column justify-content-center d-md-none filter-icon-container">
+            <a href="javascript:;" title="Toggle Filters" class="btn-toggle-filters">
+                <i class="bx bx-filter-alt"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<form action="/explore" method="get" role="form" class="explore-filters-form mb-3 mb-md-0">
+    <div class="form-group">
+        <input
+                type="text"
+                class="form-control"
+                name="query"
+                value=""
+                placeholder="ex. Data Science"
+        />
+    </div>
+
+    <hr/>
+    <h6 class="font-weight-bold mt-2">Filter by type</h6>
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="type"
+                value="project"
+                id="myProject"
+                
+        />
+        <label class="form-check-label" for="myProject">
+            Project
+        </label>
+    </div>
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="type"
+                value="workshop"
+                id="myWorkshop"
+                
+        />
+        <label class="form-check-label" for="myWorkshop">
+            Workshop
+        </label>
+    </div>
+    <hr/>
+    <h6 class="font-weight-bold mt-2">Filter by Category</h6>
+
+
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="category"
+                value="data science"
+                id="Course1"
+                
+        />
+        <label class="form-check-label" for="Course1">
+            Data Science
+        </label>
+    </div>
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="category"
+                value="product management"
+                id="Course2"
+                
+        />
+        <label class="form-check-label" for="Course2">
+            Product Management
+        </label>
+    </div>
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="category"
+                value="digital marketing"
+                id="Course3"
+                
+        />
+        <label class="form-check-label" for="Course3">
+            Digital Marketing
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="category"
+                value="software development"
+                id="Course4"
+                
+        />
+        <label class="form-check-label" for="Course3">
+            Software Development
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="category"
+                value="finance"
+                id="Course5"
+                
+        />
+        <label class="form-check-label" for="Course3">
+            Finance
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="category"
+                value="communication"
+                id="Course6"
+                
+        />
+        <label class="form-check-label" for="Course3">
+            Communication
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="category"
+                value="consulting"
+                id="Course7"
+                
+        checked="checked"
+        
+        />
+        <label class="form-check-label" for="Course3">
+            Consulting
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="category"
+                value="seo"
+                id="Course8"
+                
+        />
+        <label class="form-check-label" for="Course3">
+            SEO
+        </label>
+    </div>
+
+    <hr/>
+    <h6 class="font-weight-bold mt-2">Filter by Difficulty Level</h6>
+
+
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="difficulty"
+                value="beginner"
+                id="lvl1"
+                
+        />
+        <label class="form-check-label" for="lvl1">
+            Beginner
+        </label>
+    </div>
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="difficulty"
+                value="intermediate"
+                id="lvl2"
+                
+        />
+        <label class="form-check-label" for="lvl2">
+            Intermediate
+        </label>
+    </div>
+    <div class="form-check">
+        <input
+                class="form-check-input"
+                type="checkbox"
+                name="difficulty"
+                value="advanced"
+                id="lvl3"
+                
+        />
+        <label class="form-check-label" for="lvl3">
+            Advanced
+        </label>
+    </div>
+
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary">
+            <i class="bx bx-check"></i>
+            Apply
+        </button>
+
+        &nbsp;
+
+        <button type="button" class="btn btn-secondary btn-reset">
+            <i class="bx bx-x"></i>
+            Clear All
+        </button>
+    </div>
+</form>
+                </div>
+
+                <div class="col-12 col-md-8 col-lg-9">
+                    <div class="explore-results-container">
+                        
+
+<div class="no-results">
+    <p class="text-center">
+        No courses found matching your filters!
+    </p>
+</div>
+
+
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-info">
+                        <h3>Flinkhub</h3>
+                        <p class="pb-3">
+                            <em>
+                                Learn from the top experts in the industry
+                            </em>
+                        </p>
+                        <p>
+                            Get in touch with us at hello@flinkhub.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="https://twitter.com/flinkhub" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+                            <a href="https://facebook.com/flinkhub" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://instagram.com/flinkhub" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/flinkhub/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore">Explore Projects</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="javascript:;" class="btn-upcoming-batches">Upcoming Batches</a></li>
+<!--                        <li><i class="bx bx-chevron-right"></i> <a href="/teach">Teach with us</a></li>-->
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">T&C and Privacy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Top Projects</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=data+science">Data Science</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=product+management">Product Management</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=digital+marketing">Digital Marketing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=software+development">Software Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=finance">Finance</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Flinkhub Community</h4>
+
+                    <p>
+                        Join our
+                        <a href="https://t.me/joinchat/G6kxY1kG0mOoSXysIr5JLQ" target="_blank">Telegram group</a>
+                        and send your queries there for more information.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; 2020 Copyright <strong><span>Flinkhub Internet Pvt. Ltd.</span></strong> All Rights Reserved
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
+            Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<!--<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>-->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="/static/vendor/php-email-form/validate.js"></script>
+<script src="/static/vendor/venobox/venobox.min.js"></script>
+<script src="/static/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="/static/vendor/counterup/counterup.min.js"></script>
+<script src="/static/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="/static/vendor/aos/aos.js"></script>
+
+
+
+
+<script type="text/javascript">
+    !function () {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+            t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                t.factory = function (e) {
+                    return function () {
+                        var n = Array.prototype.slice.call(arguments);
+                        return n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function (e) {
+                t[e] = t.factory(e);
+            }), t.load = function (t) {
+                var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                var i = document.getElementsByTagName("script")[0];
+                i.parentNode.insertBefore(o, i);
+            };
+        }
+    }();
+    window.drift.SNIPPET_VERSION = '0.3.1';
+    window.drift.load('v6vh8cat5bms');
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124346507-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124346507-3');
+</script>
+
+<!-- Hotjar Tracking Code for https://flinkhub.com -->
+<script>
+    (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () {
+            (h.hj.q = h.hj.q || []).push(arguments)
+        };
+        h._hjSettings = {hjid: 991783, hjsv: 6};
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.defer = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+
+<!-- Template Main JS File -->
+<script src="/static/js/main.js"></script>
+
+
+<script src="/static/js/explore-page.js?ts=08082020"></script>
+
+
+</body>
+
+</html>
