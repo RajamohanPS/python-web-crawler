@@ -17,7 +17,9 @@ def rand_string(length = 10):
   
   return (result_str)
 
-def save_html(link,source):
+#------------------------------------
+
+def save_html(link,source,c_no):
   try:
     l = requests.get(link)
   except:
@@ -28,15 +30,15 @@ def save_html(link,source):
   size = len(response.content)
   status = response.status_code
 
-  #f_name = ('Crawl/'+ rand_string() + '.html')
-  f_name = (rand_string() + '.html')
+  f_name = ('Crawl/'+ rand_string() + '.html')
+  #f_name = (rand_string() + '.html')
   
   if int(status) == 200:
     f = open(f_name,"w")
     f.write(l.text)
     f.close()
 
-
+  #json file
   data = {
     "file": f_name,
     "link": link,
@@ -46,7 +48,9 @@ def save_html(link,source):
     "size": size,
     "created_at": datetime.utcnow(),
     "last_crawl_date": 0,
-    "is_crawled": False
+    "is_crawled": False,
+    "cycle_no": c_no
+
   }
   
   if collection.find_one({"link": link}) == None:

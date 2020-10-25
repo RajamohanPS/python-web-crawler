@@ -5,11 +5,11 @@ import time
 from bs4 import BeautifulSoup
 import pymongo
 from datetime import datetime
-import urllib
+from datetime import timedelta
 from cfg import config
-from datab import save_html
 from datab import rand_string
 from utils import crawl_html
+from utils import extract
 
 client = pymongo.MongoClient(config["mongo_srv"])
 db = client.CrawlFileData
@@ -19,12 +19,12 @@ collection = db.links
 
 root = config['root']
 r = requests.get(root)
-#f_name = ('Crawl/'+rand_string()+'.html')
-f_name = (rand_string()+'.html')
+f_name = ('Crawl/'+rand_string()+'.html')
+#f_name = (rand_string()+'.html')
 f = open(f_name,"w")
 f.write(r.text)
 f.close()
-soup = BeautifulSoup(r.text,'html.parser')
+#soup = BeautifulSoup(r.text,'html.parser')
 
 response = requests.get(root,stream = True)
 c_type = response.headers["Content-Type"]
@@ -40,32 +40,29 @@ collection.insert_one({
   "size": size,
   "created_at": datetime.utcnow(),
   "last_crawl_date": datetime.utcnow(),
-  "is_crawled": True
+  "is_crawled": True,
+  "cycle_no": 0
 }) 
 
 while True:
-
-  #f = open('links.txt', "a")
-  for link in soup.find_all('a'):
-    links = link.get('href')
-    links = urllib.parse.urljoin(root,links)
-    link_parse = urllib.parse.urlparse(links)
-    if link_parse.netloc and link_parse.scheme and (not link_parse.fragment):
-      if collection.find_one({"link": links})  == None:
-        save_html(links,root)
-        #f.write(links + '\n')
+  days = timedelta(1)
+  to_date = datetime.utcnow() - days 
+  c_no = 0 #cycle number
   
-   
-  #f.close()
-
+  extract(root,c_no)
 
   while True:
+    c_no+=1
     with futures.ThreadPoolExecutor(max_workers=5) as tpl:
-      tpl.submit(crawl_html)
-      tpl.submit(crawl_html)
-      tpl.submit(crawl_html)
-      tpl.submit(crawl_html)
-      tpl.submit(crawl_html)
+      tpl.submit(crawl_html(c_no))
+      tpl.submit(crawl_html(c_no))
+      tpl.submit(crawl_html(c_no))
+      tpl.submit(crawl_html(c_no))
+      tpl.submit(crawl_html(c_no))
+      
+    if collection.find_one({"is_crawled": False, "cycle_no": c_no-1}) == None and collection.find_one({"last_crawl_date": {"$lt": to_date}}) == None:
+      print("All crawled")
+      break
     if db.links.count_documents({})>=5000:
       print("Max limit reached")
       break

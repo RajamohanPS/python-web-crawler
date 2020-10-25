@@ -1,0 +1,680 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Data Science: Decision Trees, Boosting and Ensembles | Flinkhub Projects</title>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="/static/img/favicon.png" rel="icon">
+    <link href="/static/img/logo-square.png" rel="apple-touch-icon">
+
+    
+
+<meta name="title" property="og:title" content="Data Science: Decision Trees, Boosting and Ensembles"/>
+<meta name="description" property="og:description" content="Explore more projects on Flinkhub."/>
+
+
+<meta name="image" property="og:image" content="https://i.imgur.com/EbVa9fS.jpg"/>
+
+
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="/static/vendor/aos/aos.css">
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/vendor/icofont/icofont.min.css">
+    <link rel="stylesheet" href="/static/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="/static/vendor/venobox/venobox.css">
+    <link rel="stylesheet" href="/static/vendor/remixicon/remixicon.css">
+    <link rel="stylesheet" href="/static/vendor/owl.carousel/assets/owl.carousel.min.css">
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    
+<link rel="stylesheet" href="/static/css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="/static/css/custom.css?ts=22092020">
+
+    
+    <!-- Facebook Pixel Code -->
+    <script type="text/javascript">
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+                            'https://connect.facebook.net/en_US/fbevents.js');
+             fbq('init', '639411533618615');
+             fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img
+                height="1"
+                width="1"
+                src="https://www.facebook.com/tr?id=639411533618615&ev=PageView&noscript=1"
+        />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+
+
+
+
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+        <div class="logo mr-auto">
+            <h1 class="text-light">
+                <a href="/"><span>Flinkhub</span></a>
+            </h1>
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                
+
+                
+                <li class=""><a href="/">Home</a></li>
+<li><a href="/explore">Explore Projects</a></li>
+<li class="drop-down">
+    <a href="javascript:;">Upcoming Batches</a>
+    <ul>
+        <li><a href="/project/harshit-product-management">Cracking the PM Role</a></li>
+        <li><a href="/project/become-data-scientist">Become a Data Scientist</a></li>
+        <li><a href="/project/intro-quant-finance">Intro to Quantitative Finance</a></li>
+        <li><a href="/project/satyam-datascience-decisiontrees">Decision Trees, Boosting &amp;
+            Ensembles</a></li>
+        <li><a href="/project/akshay-seo-for-beginners">Cracking SEO in 2020</a></li>
+    </ul>
+</li>
+<li class="">
+    <a href="https://communities.flinkhub.com" class="" target="_blank">
+        Join Communities
+    </a>
+</li>
+                
+
+                <li>
+                    <button class="btn btn-buy btn-scroll-to-about ml-3 d-none d-lg-block">
+                        Apply Now
+                    </button>
+                </li>
+                
+
+                <!-- <li><a href="/teach">Teach</a></li> -->
+
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->
+
+
+<main id="main">
+    
+
+<section id="about" class="about">
+    <div class="container-fluid">
+
+        <div class="row">
+            
+            <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch"
+                 data-aos="fade-right" style="background-image: url(&#39;https://i.imgur.com/EbVa9fS.jpg&#39;);">
+                
+            </div>
+            
+
+            <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-0 px-lg-5 py-md-5 pb-5"
+                 data-aos="fade-left">
+                <h3>Data Science: Decision Trees, Boosting and Ensembles</h3>
+                <p>
+                    I'm Satyam ! I'm a Data Scientist at Gaana and an alumnus of BITS Pilani. This course is designed based on my experience in learning and working on Decision Trees and applying boosting and ensemble techniques.<br/>I will start with basic concepts of decision trees and work with you on some real-world assignments. In the end, we’ll do some mock interviews to strengthen your ability to communicate what you’ve learnt.
+                </p>
+
+                
+                <ul class="mb-3">
+                    
+                    <li>
+                        15 live classes on data science concepts and live practice
+                    </li>
+                    
+                    <li>
+                        1 Real world project
+                    </li>
+                    
+                    <li>
+                        Chat group to discuss and clear doubts
+                    </li>
+                    
+                    <li>
+                        Mentorship and interview preparation
+                    </li>
+                    
+                </ul>
+                
+
+                
+                <div class="d-inline">
+                    <span class="text-warning font-weight-bold">4.4</span>
+                    <div class="star-rating d-inline" title="4.4 out of 5">
+
+    <i class="bx bxs-star" ></i>
+    <i class="bx bxs-star" ></i>
+    <i class="bx bxs-star" ></i>
+    <i class="bx bxs-star" ></i>
+    <i class="bx bxs-star-half" ></i>
+
+</div>
+                    <span class="font-weight-light">(15)</span>
+                </div>
+                
+
+                
+                <div class="pricing mt-3" data-aos="fade-up">
+                    <div class="course-cta-container">
+    <div class="d-none register-success-container">
+        Please wait while you are redirected...
+    </div>
+
+    <form method="post" action="" onsubmit="return false;" class="register-form-container">
+        <input type="hidden" id="txtCourseId" name="courseId" value="5f02d30db25b02ed5901ca6a"/>
+        <input type="hidden" id="txtBatchDate" name="batchDate" value=""/>
+        <input type="hidden" id="txtEnrollLink" name="enrollLink" value="https://rzp.io/l/satyamdatascience"/>
+
+        <div class="row mt-1">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <label for="txtEmail">Enter your details to register</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Email</span>
+                            </div>
+                            <input
+                                    type="email"
+                                    class="form-control"
+                                    id="txtEmail"
+                                    placeholder="example@mail.com"
+                            />
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Phone</span>
+                            </div>
+                            <input type="text"
+                                   class="form-control"
+                                   id="txtPhone"
+                            />
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value="1"
+                                    id="hiringFlag"
+                                    checked="checked"
+                            />
+                            <label
+                                    class="form-check-label"
+                                    for="hiringFlag"
+                            >
+                                Opt-in for Hiring & Internships
+                                <i
+                                        class="bx bx-help-circle"
+                                        data-toggle="tooltip"
+                                        data-placement="right"
+                                        title="Allow hiring managers to directly contact you for jobs and internships."
+                                ></i>
+                            </label>
+                        </div>
+
+                        <button class="btn btn-buy btn-submit">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End About Section -->
+    
+<!-- ======= F.A.Q Section ======= -->
+<section id="faq" class="faq section-bg course-description">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+            <h2>More Details
+            </h2>
+            <p>Description
+            </p>
+        </div>
+
+        <div class="faq-list">
+            <ul>
+                
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-toggle="collapse" class="collapse" href="#faq-list-1">
+                        About Instructor
+                        <i class="bx bx-chevron-down icon-show"></i>
+                        <i class="bx bx-chevron-up icon-close"></i>
+                    </a>
+                    <div
+                            id="faq-list-1"
+                            class="collapse show"
+                            data-parent=".faq-list"
+                    >
+                        
+                        <p>
+                            I'm Satyam Kumar Singh. I'm a Data Scientist at Gaana and an alumnus of BITS Pilani.
+                        </p>
+                        
+                    </div>
+                </li>
+                
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-toggle="collapse" class="collapse" href="#faq-list-2">
+                        What you&#39;ll learn
+                        <i class="bx bx-chevron-down icon-show"></i>
+                        <i class="bx bx-chevron-up icon-close"></i>
+                    </a>
+                    <div
+                            id="faq-list-2"
+                            class="collapse "
+                            data-parent=".faq-list"
+                    >
+                        
+                        <p>
+                            - Proficiency in all spheres of decision trees, random forests, boosting and ensembles techniques.<br/>- Basic ML concepts like the bias-variance tradeoff along with detailed mathematical derivations.<br/>- Grasp on decision trees for classification as well as regression for continuous and discrete features.<br/>- Multi-label classification<br/>- Understand bootstrapping and bagging, their difference and why bagging improves classification and regression performance.<br/>- How to build Random Forests<br/>- Adaboost and XGBoost ensemble techniques<br/>- Apply all conecpts in a real world project
+                        </p>
+                        
+                    </div>
+                </li>
+                
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-toggle="collapse" class="collapse" href="#faq-list-3">
+                        Class Curriculum
+                        <i class="bx bx-chevron-down icon-show"></i>
+                        <i class="bx bx-chevron-up icon-close"></i>
+                    </a>
+                    <div
+                            id="faq-list-3"
+                            class="collapse "
+                            data-parent=".faq-list"
+                    >
+                        
+                        <p>
+                            Class 1: Bias, variance and their derivation<br/><br/>Class 2-4: Building decision trees for classification and regression.<br/><br/>Class 5-9: Bootstrapping, Bagging<br/><br/>Class 8-10: Random Forest<br/><br/>Class 11: Boosting, AdaBoost<br/><br/>Class 12-13: XGBoost<br/><br/>Class 14-15: Mock interviews and Project review
+                        </p>
+                        
+                    </div>
+                </li>
+                
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-toggle="collapse" class="collapse" href="#faq-list-4">
+                        Who should apply
+                        <i class="bx bx-chevron-down icon-show"></i>
+                        <i class="bx bx-chevron-up icon-close"></i>
+                    </a>
+                    <div
+                            id="faq-list-4"
+                            class="collapse "
+                            data-parent=".faq-list"
+                    >
+                        
+                        <p>
+                            Those who’ve started with the basics of  Machine Learning and Python programming and want to get in-depth knowledge of Decision trees.
+                        </p>
+                        
+                    </div>
+                </li>
+                
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-toggle="collapse" class="collapse" href="#faq-list-5">
+                        Pre-requisites
+                        <i class="bx bx-chevron-down icon-show"></i>
+                        <i class="bx bx-chevron-up icon-close"></i>
+                    </a>
+                    <div
+                            id="faq-list-5"
+                            class="collapse "
+                            data-parent=".faq-list"
+                    >
+                        
+                        <p>
+                            Slight exposure to Machine learning and basics of python programming
+                        </p>
+                        
+                    </div>
+                </li>
+                
+                <li data-aos="fade-up">
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-toggle="collapse" class="collapse" href="#faq-list-6">
+                        Time Commitment
+                        <i class="bx bx-chevron-down icon-show"></i>
+                        <i class="bx bx-chevron-up icon-close"></i>
+                    </a>
+                    <div
+                            id="faq-list-6"
+                            class="collapse "
+                            data-parent=".faq-list"
+                    >
+                        
+                        <p>
+                            In a week, 2 hours in class and 4 hours outside class
+                        </p>
+                        
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="pricing mt-4" data-aos="fade-up">
+            <button class="btn btn-buy btn-enroll btn-scroll-to-about">
+                Apply Now
+            </button>
+        </div>
+    </div>
+</section><!-- End F.A.Q Section -->
+
+    <!-- ======= Counts Section ======= -->
+<section id="counts" class="counts">
+    <div class="container">
+
+        <div class="row" data-aos="fade-up">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="count-box">
+                    <i class="icofont-simple-smile"></i>
+                    <span>10</span>
+                    <p>Batch Size
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                <div class="count-box">
+                    <i class="icofont-users-alt-5"></i>
+                    <span>8 weeks</span>
+                    <p>Course Duration
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                <div class="count-box">
+                    <i class="icofont-live-support"></i>
+                    <span>Intermediate</span>
+                    <p>Difficulty
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                <div class="count-box">
+                    <i class="icofont-document-folder"></i>
+                    <span>INR 4,999</span>
+                    <p>Price
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Counts Section -->
+    
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+            <h2>Apply Now
+            </h2>
+            <p>Upcoming Batches
+            </p>
+        </div>
+
+        <div class="row" data-aos="fade-left">
+            
+            
+            
+            
+            <div class="col-lg-3 col-md-6 mt-0 mt-md-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>18 Jul - 6 Sep</h3>
+                    <ul>
+                        
+                        <li>4 Slots remaining</li>
+                        
+                        <li>60 min class</li>
+                        
+                        <li>Timings: Sat 7PM, Sun 7PM</li>
+                        
+                    </ul>
+                    <div class="btn-wrap">
+                        <a
+                            href="javascript:;"
+                            class="btn-enroll btn-buy"
+                            data-course-id="5f02d30db25b02ed5901ca6a"
+                            data-batch-date="18 Jul - 6 Sep"
+                        >
+                            Apply
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>8 Aug - 27 Sep</h3>
+                    <ul>
+                        
+                        <li>10 Slots remaining</li>
+                        
+                        <li>60 min class</li>
+                        
+                        <li>Timings: Sat 7PM, Sun 7PM</li>
+                        
+                    </ul>
+                    <div class="btn-wrap">
+                        <a
+                            href="javascript:;"
+                            class="btn-enroll btn-buy"
+                            data-course-id="5f02d30db25b02ed5901ca6a"
+                            data-batch-date="8 Aug - 27 Sep"
+                        >
+                            Apply
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section><!-- End Pricing Section -->
+
+    
+
+</main>
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-info">
+                        <h3>Flinkhub</h3>
+                        <p class="pb-3">
+                            <em>
+                                Learn from the top experts in the industry
+                            </em>
+                        </p>
+                        <p>
+                            Get in touch with us at hello@flinkhub.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="https://twitter.com/flinkhub" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+                            <a href="https://facebook.com/flinkhub" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://instagram.com/flinkhub" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/flinkhub/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore">Explore Projects</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="javascript:;" class="btn-upcoming-batches">Upcoming Batches</a></li>
+<!--                        <li><i class="bx bx-chevron-right"></i> <a href="/teach">Teach with us</a></li>-->
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">T&C and Privacy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Top Projects</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=data+science">Data Science</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=product+management">Product Management</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=digital+marketing">Digital Marketing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=software+development">Software Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/explore?category=finance">Finance</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Flinkhub Community</h4>
+
+                    <p>
+                        Join our
+                        <a href="https://t.me/joinchat/G6kxY1kG0mOoSXysIr5JLQ" target="_blank">Telegram group</a>
+                        and send your queries there for more information.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; 2020 Copyright <strong><span>Flinkhub Internet Pvt. Ltd.</span></strong> All Rights Reserved
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
+            Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<!--<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>-->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="/static/vendor/php-email-form/validate.js"></script>
+<script src="/static/vendor/venobox/venobox.min.js"></script>
+<script src="/static/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="/static/vendor/counterup/counterup.min.js"></script>
+<script src="/static/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="/static/vendor/aos/aos.js"></script>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124346507-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124346507-3');
+</script>
+
+
+<!-- Hotjar Tracking Code for https://flinkhub.com -->
+<script>
+    (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () {
+            (h.hj.q = h.hj.q || []).push(arguments)
+        };
+        h._hjSettings = {hjid: 991783, hjsv: 6};
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.defer = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+</script>
+
+
+
+<!-- Template Main JS File -->
+<script src="/static/js/main.js?ts=21092020"></script>
+
+<script type="text/javascript">
+    const COMPANY_NAME = "Flinkhub";
+
+    
+        const RAZORPAY_KEY_ID = "rzp_live_8y6PQsxTG0eQFg";
+    
+
+
+</script>
+
+
+<script src="/static/vendor/jquery.magnific-popup.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="/static/js/course-page.js?ts=22092020"></script>
+
+
+</body>
+
+</html>

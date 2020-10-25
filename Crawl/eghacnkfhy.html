@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <title>Roadmap.com | The #1 community for product teams</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ccdc79aa09","applicationID":"28625426","transactionName":"IQ5dEUBeWVlXRxwQRQcSRwxdX0YaW1tXBEg=","queueTime":7,"applicationTime":1125,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"ccdc79aa09",applicationID:"28625426"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0173cf">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="xKPmQ0uBtIaSRUqctdTm54oiGHRY0kaWrs1gdTI068CVXkpOlxGPmfQJ+JSnOuEr9g3Wa5VancVlEs6vwLa22A==" />
+
+      <meta name="google-site-verification" content="XOAQavIiUpaEWOVvUifmMbj7ndytW-wp3h2cnU-RaCM" />
+      <meta name="google-site-verification" content="RUQcMjWksVNtVmXBFBiIJ1iXyjjlF5yPUrirDSkmLPk" />
+
+      <meta name="description" content="Connect with a community of more than 13,000 product managers and product marketers to discuss how to build and market products customers love. This is a free online forum for asking questions, sharing answers, and posting current job openings." />
+
+    <meta property="og:title" content="Roadmap.com">
+<meta property="og:description" content="Roadmap.com is where more than 13,000 product managers and product marketers discuss how to build and market products customers love.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.roadmap.com/">
+<meta property="og:image" content="https://www.roadmap.com/assets/images/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@roadmap_com">
+    <link rel="stylesheet" media="screen" href="/assets/application.c32ffae47a8514b827bb.css" data-turbolinks-track="reload" />
+
+    <script src="/assets/application-0ac2cbc9a25c142d8173.js" data-turbolinks-track="reload"></script>
+
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://www.roadmap.com",
+        "logo": "http://www.roadmap.com/assets/images/svg/roadmap.svg"
+      }
+    </script>
+  </head>
+
+  <body class="questions-page questions-page-index"
+    data-consent-url="https://www.roadmap.com/consent/consent"
+    data-consent-confirmed-url="https://www.roadmap.com/consent/confirmed">
+    <div class="page-container push">
+      <div id='flash-msgs'>
+</div>
+
+
+      <input type="hidden" name="logged_in" id="logged-in-status" value="false" />
+
+<header class="page-header flex-col flex-justify-center push">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-7 col-sm-9 col-md-9 col-lg-9 flex-row flex-align-center">
+        <a class="root-link flex-col" href="/">
+          <img alt="Roadmap" src="/assets/images/svg/roadmap.svg" />
+</a>        <nav class="xs-hide md-show flex-expand pl2">
+          <ul id="main-nav" class="list-inline flex-justify-around flex-expand offscreen">
+            <li class="dropdown page-header-menu">
+  <div class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Topics</div>
+  <ul class="dropdown-menu dropdown-menu-left">
+      <li>
+        <a href="/careers">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-careers">Careers</span>
+</a>      </li>
+      <li>
+        <a href="/collaboration">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-collaboration">Collaboration</span>
+</a>      </li>
+      <li>
+        <a href="/ideas">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-ideas">Ideas</span>
+</a>      </li>
+      <li>
+        <a href="/launches">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-launches">Launches</span>
+</a>      </li>
+      <li>
+        <a href="/marketing">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-marketing">Marketing</span>
+</a>      </li>
+      <li>
+        <a href="/methodologies">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-methodologies">Methodologies</span>
+</a>      </li>
+      <li>
+        <a href="/releases">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-releases">Releases</span>
+</a>      </li>
+      <li>
+        <a href="/requirements">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-requirements">Requirements</span>
+</a>      </li>
+      <li>
+        <a href="/research">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-research">Research</span>
+</a>      </li>
+      <li>
+        <a href="/roadmaps">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-roadmaps">Roadmaps</span>
+</a>      </li>
+      <li>
+        <a href="/strategy">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-strategy">Strategy</span>
+</a>      </li>
+      <li>
+        <a href="/tools">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-tools">Tools</span>
+</a>          <ul class="dropdown-menu sub-topic-menu">
+              <li>
+                <a href="/tools/aha"><span class="roadmap-icon roadmap-icon-prefix roadmap-icon-aha">Aha!</span></a>
+              </li>
+              <li>
+                <a href="/tools/jira"><span class="roadmap-icon roadmap-icon-prefix roadmap-icon-jira">Jira</span></a>
+              </li>
+              <li>
+                <a href="/tools/microsoft-azure-devops"><span class="roadmap-icon roadmap-icon-prefix roadmap-icon-microsoft-azure-devops">Microsoft Azure DevOps</span></a>
+              </li>
+              <li>
+                <a href="/tools/rally"><span class="roadmap-icon roadmap-icon-prefix roadmap-icon-rally">Rally</span></a>
+              </li>
+          </ul>
+      </li>
+      <li>
+        <a href="/ux">
+          <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-ux">User experience</span>
+</a>      </li>
+  </ul>
+</li>
+
+            <li class="flex-expand search">
+              <div class="flex-expand page-header-search search-bar">
+  <div class="search-container flex-col">
+    <div class="search-header">
+      <div class="btn-group">
+        <input class="search-box" type="text" placeholder='Search or ask a question' autocomplete="off" required="required" />
+        <button class='search-ask'>
+          <span class="search-unfocused fa fa-search"></span>
+          <span class="search-focused" data-header-text="Ask question" data-mobile-text="Ask"></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-results-container">
+      <div class="search-results"></div>
+    </div>
+  </div>
+</div>
+
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-xs-5 col-sm-3 col-md-3 col-lg-3 flex-col flex-justify-center flex-align-end">
+        <ul class="list-inline page-header-buttons">
+            <li class="ask-a-question">
+              <a class="btn btn-lg btn-signup" data-remote="true" href="/questions/new?question%5Btitle%5D=">Ask a question</a>
+            </li>
+            <li>
+              <a class="btn btn-lg login-button" data-remote="true" href="/login?form=login">Log in</a>
+            </li>
+          <li class="md-hide">
+            <button class="btn btn-link md-hide mobile-panel-toggle-button" type="button">
+              <i class="fa fa-bars fa-lg"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div id="panel">
+    <div class="ask-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="ask-hero-inner flex-col flex-justify-center flex-align-center">
+            <div class="ask-hero-contents">
+              <div class="ask-hero-text ask-hero-primary-text">A Community of Product Teams</div>
+              <div class="ask-hero-text">Innovators connect here to build and market products customers love</div>
+              <div class="row around-xs">
+                <div class="col-xs-12 col-md-6 col-lg-5 ask-hero-search search-bar">
+  <div class="search-container flex-col">
+    <div class="search-header">
+      <div class="btn-group">
+        <input class="search-box" type="text" placeholder='Search or ask a question' autocomplete="off" required="required" />
+        <button class='search-ask'>
+          <span class="search-unfocused fa fa-search"></span>
+          <span class="search-focused" data-header-text="Ask question" data-mobile-text="Ask"></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-results-container">
+      <div class="search-results"></div>
+    </div>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="page-main">
+    <div class="container">
+      
+        
+  
+
+<div class="row">
+  <main class="col-xs-12 col-md-9 section" role="main">
+    <header class="topic-header">
+  <h2 class="topic-header-name"></h2>
+</header>
+
+<div class="topics">
+  
+
+      <article class="topic" data-link="/hiring-product-managers-october-2020">
+        <div id="3147416" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/rose-thompson">Rose Thompson</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/careers">Careers</a>
+    </li>
+    <li>4 replies</li>
+    <li><time class="timeago" datetime="2020-10-06T17:19:10Z">18 days ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Who is hiring product managers? (October 2020)</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="3147416" data-question-slug="hiring-product-managers-october-2020" data-comment-id="" data-replyable-id="3147416" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-3147416" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/hiring-product-managers-october-2020/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/hiring-product-managers-october-2020&amp;title=Who%20is%20hiring%20product%20managers?%20(October%202020)" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/hiring-product-managers-october-2020&amp;title=Who%20is%20hiring%20product%20managers?%20(October%202020)"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/hiring-product-managers-october-2020&amp;text=Who%20is%20hiring%20product%20managers?%20(October%202020)" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/hiring-product-managers-october-2020&amp;text=Who%20is%20hiring%20product%20managers?%20(October%202020)"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/hiring-product-managers-october-2020"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/product-manager-measure-productivity">
+        <div id="11857379" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/rob-rubinoff-1">Rob Rubinoff</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/careers">Careers</a>
+    </li>
+    <li>3 replies</li>
+    <li><time class="timeago" datetime="2020-05-28T14:53:49Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>How does a Product Manager measure their productivity?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="11857379" data-question-slug="product-manager-measure-productivity" data-comment-id="" data-replyable-id="11857379" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-11857379" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/product-manager-measure-productivity/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/product-manager-measure-productivity&amp;title=How%20does%20a%20Product%20Manager%20measure%20their%20productivity?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/product-manager-measure-productivity&amp;title=How%20does%20a%20Product%20Manager%20measure%20their%20productivity?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/product-manager-measure-productivity&amp;text=How%20does%20a%20Product%20Manager%20measure%20their%20productivity?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/product-manager-measure-productivity&amp;text=How%20does%20a%20Product%20Manager%20measure%20their%20productivity?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/product-manager-measure-productivity"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/hard-collaborate-online-whiteboards">
+        <div id="7308960" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/niklas-lavrell">Niklas Lavrell</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/collaboration">Collaboration</a>
+    </li>
+    <li>0 replies</li>
+    <li><time class="timeago" datetime="2020-10-15T10:23:46Z">8 days ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Do you find it hard to collaborate with online whiteboards?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="7308960" data-question-slug="hard-collaborate-online-whiteboards" data-comment-id="" data-replyable-id="7308960" >
+          <span class="flex-row">
+            <span class='xs-hide sm-show'>Be the first to answer</span><span class='xs-show sm-hide'>Answer</span>
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-7308960" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/hard-collaborate-online-whiteboards/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/hard-collaborate-online-whiteboards&amp;title=Do%20you%20find%20it%20hard%20to%20collaborate%20with%20online%20whiteboards?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/hard-collaborate-online-whiteboards&amp;title=Do%20you%20find%20it%20hard%20to%20collaborate%20with%20online%20whiteboards?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/hard-collaborate-online-whiteboards&amp;text=Do%20you%20find%20it%20hard%20to%20collaborate%20with%20online%20whiteboards?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/hard-collaborate-online-whiteboards&amp;text=Do%20you%20find%20it%20hard%20to%20collaborate%20with%20online%20whiteboards?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/hard-collaborate-online-whiteboards"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/prevent-stories-default-0-integrating-aha-jira">
+        <div id="6645367" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/chase-callegan">Chase Callegan</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/jira">Jira</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-10-08T14:34:21Z">15 days ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>How do I prevent stories being default to &quot;0&quot; when integrating Aha! with Jira</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="6645367" data-question-slug="prevent-stories-default-0-integrating-aha-jira" data-comment-id="" data-replyable-id="6645367" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-6645367" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/prevent-stories-default-0-integrating-aha-jira/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/prevent-stories-default-0-integrating-aha-jira&amp;title=How%20do%20I%20prevent%20stories%20being%20default%20to%20%220%22%20when%20integrating%20Aha!%20with%20Jira" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/prevent-stories-default-0-integrating-aha-jira&amp;title=How%20do%20I%20prevent%20stories%20being%20default%20to%20%220%22%20when%20integrating%20Aha!%20with%20Jira"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/prevent-stories-default-0-integrating-aha-jira&amp;text=How%20do%20I%20prevent%20stories%20being%20default%20to%20%220%22%20when%20integrating%20Aha!%20with%20Jira" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/prevent-stories-default-0-integrating-aha-jira&amp;text=How%20do%20I%20prevent%20stories%20being%20default%20to%20%220%22%20when%20integrating%20Aha!%20with%20Jira"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/prevent-stories-default-0-integrating-aha-jira"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/remove-date-format-roadmap">
+        <div id="1039647" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/phil-koziol">Phil Koziol</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/roadmaps">Roadmaps</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-10-01T07:44:51Z">22 days ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Can I remove the date format from the Roadmap? </h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="1039647" data-question-slug="remove-date-format-roadmap" data-comment-id="" data-replyable-id="1039647" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-1039647" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/remove-date-format-roadmap/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/remove-date-format-roadmap&amp;title=Can%20I%20remove%20the%20date%20format%20from%20the%20Roadmap?%20" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/remove-date-format-roadmap&amp;title=Can%20I%20remove%20the%20date%20format%20from%20the%20Roadmap?%20"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/remove-date-format-roadmap&amp;text=Can%20I%20remove%20the%20date%20format%20from%20the%20Roadmap?%20" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/remove-date-format-roadmap&amp;text=Can%20I%20remove%20the%20date%20format%20from%20the%20Roadmap?%20"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/remove-date-format-roadmap"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/critical-skills-product-manager">
+        <div id="3552192" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/chris-murray">Chris Murray</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/careers">Careers</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-09-10T23:23:39Z">about 1 month ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>What are the most critical skills of a product manager?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="3552192" data-question-slug="critical-skills-product-manager" data-comment-id="" data-replyable-id="3552192" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-3552192" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/critical-skills-product-manager/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/critical-skills-product-manager&amp;title=What%20are%20the%20most%20critical%20skills%20of%20a%20product%20manager?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/critical-skills-product-manager&amp;title=What%20are%20the%20most%20critical%20skills%20of%20a%20product%20manager?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/critical-skills-product-manager&amp;text=What%20are%20the%20most%20critical%20skills%20of%20a%20product%20manager?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/critical-skills-product-manager&amp;text=What%20are%20the%20most%20critical%20skills%20of%20a%20product%20manager?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/critical-skills-product-manager"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/define-feature">
+        <div id="10865351" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/avigail-ehrenhaus">Avigail Ehrenhaus</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/requirements">Requirements</a>
+    </li>
+    <li>0 replies</li>
+    <li><time class="timeago" datetime="2020-09-08T20:18:42Z">about 2 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>How do you define a feature?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="10865351" data-question-slug="define-feature" data-comment-id="" data-replyable-id="10865351" >
+          <span class="flex-row">
+            <span class='xs-hide sm-show'>Be the first to answer</span><span class='xs-show sm-hide'>Answer</span>
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-10865351" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/define-feature/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/define-feature&amp;title=How%20do%20you%20define%20a%20feature?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/define-feature&amp;title=How%20do%20you%20define%20a%20feature?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/define-feature&amp;text=How%20do%20you%20define%20a%20feature?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/define-feature&amp;text=How%20do%20you%20define%20a%20feature?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/define-feature"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/hiring-product-managers-september-2020">
+        <div id="9743092" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/rose-thompson">Rose Thompson</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/careers">Careers</a>
+    </li>
+    <li>4 replies</li>
+    <li><time class="timeago" datetime="2020-09-02T15:27:43Z">about 2 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Who is hiring product managers? (September 2020)</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="9743092" data-question-slug="hiring-product-managers-september-2020" data-comment-id="" data-replyable-id="9743092" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-9743092" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/hiring-product-managers-september-2020/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/hiring-product-managers-september-2020&amp;title=Who%20is%20hiring%20product%20managers?%20(September%202020)" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/hiring-product-managers-september-2020&amp;title=Who%20is%20hiring%20product%20managers?%20(September%202020)"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/hiring-product-managers-september-2020&amp;text=Who%20is%20hiring%20product%20managers?%20(September%202020)" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/hiring-product-managers-september-2020&amp;text=Who%20is%20hiring%20product%20managers?%20(September%202020)"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/hiring-product-managers-september-2020"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/connect-pull-data-aha-power-bi">
+        <div id="5022976" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/sandeep-bethi">Sandeep Bethi</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-08-26T07:50:23Z">about 2 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Can we connect and pull the data from Aha into Power BI?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="5022976" data-question-slug="connect-pull-data-aha-power-bi" data-comment-id="" data-replyable-id="5022976" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-5022976" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/connect-pull-data-aha-power-bi/likes.js">
+    <span class="flex-row">
+        Like
+        <span class="divider"></span>
+        <span class="number">1</span>
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/connect-pull-data-aha-power-bi&amp;title=Can%20we%20connect%20and%20pull%20the%20data%20from%20Aha%20into%20Power%20BI?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/connect-pull-data-aha-power-bi&amp;title=Can%20we%20connect%20and%20pull%20the%20data%20from%20Aha%20into%20Power%20BI?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/connect-pull-data-aha-power-bi&amp;text=Can%20we%20connect%20and%20pull%20the%20data%20from%20Aha%20into%20Power%20BI?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/connect-pull-data-aha-power-bi&amp;text=Can%20we%20connect%20and%20pull%20the%20data%20from%20Aha%20into%20Power%20BI?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/connect-pull-data-aha-power-bi"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/product-manager-seeking-voice-activated-enterprise-saas-startup">
+        <div id="4314440" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/kirk-knight">Kirk Knight</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/careers">Careers</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-08-30T03:09:25Z">about 1 month ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Are you the Product Manager we&#39;re seeking for our voice-activated Enterprise SaaS startup?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="4314440" data-question-slug="product-manager-seeking-voice-activated-enterprise-saas-startup" data-comment-id="" data-replyable-id="4314440" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-4314440" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/product-manager-seeking-voice-activated-enterprise-saas-startup/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/product-manager-seeking-voice-activated-enterprise-saas-startup&amp;title=Are%20you%20the%20Product%20Manager%20we&#39;re%20seeking%20for%20our%20voice-activated%20Enterprise%20SaaS%20startup?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/product-manager-seeking-voice-activated-enterprise-saas-startup&amp;title=Are%20you%20the%20Product%20Manager%20we&#39;re%20seeking%20for%20our%20voice-activated%20Enterprise%20SaaS%20startup?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/product-manager-seeking-voice-activated-enterprise-saas-startup&amp;text=Are%20you%20the%20Product%20Manager%20we&#39;re%20seeking%20for%20our%20voice-activated%20Enterprise%20SaaS%20startup?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/product-manager-seeking-voice-activated-enterprise-saas-startup&amp;text=Are%20you%20the%20Product%20Manager%20we&#39;re%20seeking%20for%20our%20voice-activated%20Enterprise%20SaaS%20startup?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/product-manager-seeking-voice-activated-enterprise-saas-startup"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/standalone-roadmapping-tool-vs-jira-portfolio">
+        <div id="9122227" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/matthew-hubbard">Matthew Hubbard</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools">Tools</a>
+    </li>
+    <li>2 replies</li>
+    <li><time class="timeago" datetime="2020-04-21T14:27:27Z">6 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>What are the benefits of a standalone roadmapping tool vs. Portfolio for Jira?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="9122227" data-question-slug="standalone-roadmapping-tool-vs-jira-portfolio" data-comment-id="" data-replyable-id="9122227" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-9122227" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/standalone-roadmapping-tool-vs-jira-portfolio/likes.js">
+    <span class="flex-row">
+        Like
+        <span class="divider"></span>
+        <span class="number">1</span>
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/standalone-roadmapping-tool-vs-jira-portfolio&amp;title=What%20are%20the%20benefits%20of%20a%20standalone%20roadmapping%20tool%20vs.%20Portfolio%20for%20Jira?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/standalone-roadmapping-tool-vs-jira-portfolio&amp;title=What%20are%20the%20benefits%20of%20a%20standalone%20roadmapping%20tool%20vs.%20Portfolio%20for%20Jira?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/standalone-roadmapping-tool-vs-jira-portfolio&amp;text=What%20are%20the%20benefits%20of%20a%20standalone%20roadmapping%20tool%20vs.%20Portfolio%20for%20Jira?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/standalone-roadmapping-tool-vs-jira-portfolio&amp;text=What%20are%20the%20benefits%20of%20a%20standalone%20roadmapping%20tool%20vs.%20Portfolio%20for%20Jira?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/standalone-roadmapping-tool-vs-jira-portfolio"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/etiquette-question-ok-post-job">
+        <div id="321793" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/david-bean">David Bean</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/careers">Careers</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-09-11T21:23:48Z">about 1 month ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Etiquette question: ok to post a job here?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="321793" data-question-slug="etiquette-question-ok-post-job" data-comment-id="" data-replyable-id="321793" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-321793" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/etiquette-question-ok-post-job/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/etiquette-question-ok-post-job&amp;title=Etiquette%20question:%20ok%20to%20post%20a%20job%20here?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/etiquette-question-ok-post-job&amp;title=Etiquette%20question:%20ok%20to%20post%20a%20job%20here?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/etiquette-question-ok-post-job&amp;text=Etiquette%20question:%20ok%20to%20post%20a%20job%20here?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/etiquette-question-ok-post-job&amp;text=Etiquette%20question:%20ok%20to%20post%20a%20job%20here?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/etiquette-question-ok-post-job"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/restore-deleted-epic-aha">
+        <div id="5688180" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/sana-nauman">Sana Nauman</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-07-12T22:32:07Z">3 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Can I restore a deleted epic in Aha!</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="5688180" data-question-slug="restore-deleted-epic-aha" data-comment-id="" data-replyable-id="5688180" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-5688180" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/restore-deleted-epic-aha/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/restore-deleted-epic-aha&amp;title=Can%20I%20restore%20a%20deleted%20epic%20in%20Aha!" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/restore-deleted-epic-aha&amp;title=Can%20I%20restore%20a%20deleted%20epic%20in%20Aha!"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/restore-deleted-epic-aha&amp;text=Can%20I%20restore%20a%20deleted%20epic%20in%20Aha!" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/restore-deleted-epic-aha&amp;text=Can%20I%20restore%20a%20deleted%20epic%20in%20Aha!"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/restore-deleted-epic-aha"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/current-practices-challenges-integrating-user-feedback-requirements">
+        <div id="11047351" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/dana-naous-1">Dana Naous</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/methodologies">Methodologies</a>
+    </li>
+    <li>0 replies</li>
+    <li><time class="timeago" datetime="2020-07-03T12:08:37Z">4 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>What are your current practices and challenges for integrating user feedback and requirements in mass-market software product design?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="11047351" data-question-slug="current-practices-challenges-integrating-user-feedback-requirements" data-comment-id="" data-replyable-id="11047351" >
+          <span class="flex-row">
+            <span class='xs-hide sm-show'>Be the first to answer</span><span class='xs-show sm-hide'>Answer</span>
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-11047351" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/current-practices-challenges-integrating-user-feedback-requirements/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/current-practices-challenges-integrating-user-feedback-requirements&amp;title=What%20are%20your%20current%20practices%20and%20challenges%20for%20integrating%20user%20feedback%20and%20requirements%20in%20mass-market%20software%20product%20design?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/current-practices-challenges-integrating-user-feedback-requirements&amp;title=What%20are%20your%20current%20practices%20and%20challenges%20for%20integrating%20user%20feedback%20and%20requirements%20in%20mass-market%20software%20product%20design?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/current-practices-challenges-integrating-user-feedback-requirements&amp;text=What%20are%20your%20current%20practices%20and%20challenges%20for%20integrating%20user%20feedback%20and%20requirements%20in%20mass-market%20software%20product%20design?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/current-practices-challenges-integrating-user-feedback-requirements&amp;text=What%20are%20your%20current%20practices%20and%20challenges%20for%20integrating%20user%20feedback%20and%20requirements%20in%20mass-market%20software%20product%20design?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/current-practices-challenges-integrating-user-feedback-requirements"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/integrate-data-analytics-tools-aha">
+        <div id="8786452" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/christina-hollingshead">Christina Hollingshead</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>0 replies</li>
+    <li><time class="timeago" datetime="2020-06-29T19:49:01Z">3 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Has anyone gotten data from analytics tools into Aha!?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="8786452" data-question-slug="integrate-data-analytics-tools-aha" data-comment-id="" data-replyable-id="8786452" >
+          <span class="flex-row">
+            <span class='xs-hide sm-show'>Be the first to answer</span><span class='xs-show sm-hide'>Answer</span>
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-8786452" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/integrate-data-analytics-tools-aha/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/integrate-data-analytics-tools-aha&amp;title=Has%20anyone%20gotten%20data%20from%20analytics%20tools%20into%20Aha!?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/integrate-data-analytics-tools-aha&amp;title=Has%20anyone%20gotten%20data%20from%20analytics%20tools%20into%20Aha!?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/integrate-data-analytics-tools-aha&amp;text=Has%20anyone%20gotten%20data%20from%20analytics%20tools%20into%20Aha!?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/integrate-data-analytics-tools-aha&amp;text=Has%20anyone%20gotten%20data%20from%20analytics%20tools%20into%20Aha!?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/integrate-data-analytics-tools-aha"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/connect-aha-jira-allow-tracking-goal-progress">
+        <div id="3720197" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/kevin-m-kowitski">Kevin M Kowitski</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-06-24T15:58:07Z">4 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>How can I connect Aha to Jira to allow for tracking of Goal Progress?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="3720197" data-question-slug="connect-aha-jira-allow-tracking-goal-progress" data-comment-id="" data-replyable-id="3720197" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-3720197" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/connect-aha-jira-allow-tracking-goal-progress/likes.js">
+    <span class="flex-row">
+        Like
+        <span class="divider"></span>
+        <span class="number">1</span>
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/connect-aha-jira-allow-tracking-goal-progress&amp;title=How%20can%20I%20connect%20Aha%20to%20Jira%20to%20allow%20for%20tracking%20of%20Goal%20Progress?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/connect-aha-jira-allow-tracking-goal-progress&amp;title=How%20can%20I%20connect%20Aha%20to%20Jira%20to%20allow%20for%20tracking%20of%20Goal%20Progress?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/connect-aha-jira-allow-tracking-goal-progress&amp;text=How%20can%20I%20connect%20Aha%20to%20Jira%20to%20allow%20for%20tracking%20of%20Goal%20Progress?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/connect-aha-jira-allow-tracking-goal-progress&amp;text=How%20can%20I%20connect%20Aha%20to%20Jira%20to%20allow%20for%20tracking%20of%20Goal%20Progress?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/connect-aha-jira-allow-tracking-goal-progress"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/consultant-french-software-editor">
+        <div id="4604571" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/laurent-arnal">Laurent ARNAL</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>0 replies</li>
+    <li><time class="timeago" datetime="2020-06-25T12:56:24Z">4 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Searching for Aha! consultant for a French Software Editor</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="4604571" data-question-slug="consultant-french-software-editor" data-comment-id="" data-replyable-id="4604571" >
+          <span class="flex-row">
+            <span class='xs-hide sm-show'>Be the first to answer</span><span class='xs-show sm-hide'>Answer</span>
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-4604571" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/consultant-french-software-editor/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/consultant-french-software-editor&amp;title=Searching%20for%20Aha!%20consultant%20for%20a%20French%20Software%20Editor" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/consultant-french-software-editor&amp;title=Searching%20for%20Aha!%20consultant%20for%20a%20French%20Software%20Editor"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/consultant-french-software-editor&amp;text=Searching%20for%20Aha!%20consultant%20for%20a%20French%20Software%20Editor" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/consultant-french-software-editor&amp;text=Searching%20for%20Aha!%20consultant%20for%20a%20French%20Software%20Editor"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/consultant-french-software-editor"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/recommended-app-use-user-community">
+        <div id="7537477" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/matt-heggelund">Matt Heggelund</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/collaboration">Collaboration</a>
+    </li>
+    <li>2 replies</li>
+    <li><time class="timeago" datetime="2020-04-21T18:41:56Z">6 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Recommended app to use for our &quot;user community&quot;?  </h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="7537477" data-question-slug="recommended-app-use-user-community" data-comment-id="" data-replyable-id="7537477" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-7537477" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/recommended-app-use-user-community/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/recommended-app-use-user-community&amp;title=Recommended%20app%20to%20use%20for%20our%20%22user%20community%22?%20%20" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/recommended-app-use-user-community&amp;title=Recommended%20app%20to%20use%20for%20our%20%22user%20community%22?%20%20"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/recommended-app-use-user-community&amp;text=Recommended%20app%20to%20use%20for%20our%20%22user%20community%22?%20%20" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/recommended-app-use-user-community&amp;text=Recommended%20app%20to%20use%20for%20our%20%22user%20community%22?%20%20"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/recommended-app-use-user-community"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/collecting-user-feedback-online">
+        <div id="1165551" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/joe-tannorella-1">Joe Tannorella</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/ideas">Ideas</a>
+    </li>
+    <li>2 replies</li>
+    <li><time class="timeago" datetime="2020-06-04T07:39:33Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>How are you collecting user feedback online?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="1165551" data-question-slug="collecting-user-feedback-online" data-comment-id="" data-replyable-id="1165551" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-1165551" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/collecting-user-feedback-online/likes.js">
+    <span class="flex-row">
+        Like
+        <span class="divider"></span>
+        <span class="number">2</span>
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/collecting-user-feedback-online&amp;title=How%20are%20you%20collecting%20user%20feedback%20online?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/collecting-user-feedback-online&amp;title=How%20are%20you%20collecting%20user%20feedback%20online?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/collecting-user-feedback-online&amp;text=How%20are%20you%20collecting%20user%20feedback%20online?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/collecting-user-feedback-online&amp;text=How%20are%20you%20collecting%20user%20feedback%20online?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/collecting-user-feedback-online"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/product-management-online-event">
+        <div id="2549905" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/masa-foundation">MASA Foundation</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/careers">Careers</a>
+    </li>
+    <li>0 replies</li>
+    <li><time class="timeago" datetime="2020-06-06T16:50:35Z">4 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Virtual fireside chat with product manager Michael Sayman</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="2549905" data-question-slug="product-management-online-event" data-comment-id="" data-replyable-id="2549905" >
+          <span class="flex-row">
+            <span class='xs-hide sm-show'>Be the first to answer</span><span class='xs-show sm-hide'>Answer</span>
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-2549905" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/product-management-online-event/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/product-management-online-event&amp;title=Virtual%20fireside%20chat%20with%20product%20manager%20Michael%20Sayman" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/product-management-online-event&amp;title=Virtual%20fireside%20chat%20with%20product%20manager%20Michael%20Sayman"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/product-management-online-event&amp;text=Virtual%20fireside%20chat%20with%20product%20manager%20Michael%20Sayman" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/product-management-online-event&amp;text=Virtual%20fireside%20chat%20with%20product%20manager%20Michael%20Sayman"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/product-management-online-event"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/product-management-student-survey-anonymous">
+        <div id="295934" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/jamel-boussaid">Jamel Boussaid</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/research">Research</a>
+    </li>
+    <li>0 replies</li>
+    <li><time class="timeago" datetime="2020-06-05T14:43:05Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Short survey about Product Management for my master&#39;s program</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="295934" data-question-slug="product-management-student-survey-anonymous" data-comment-id="" data-replyable-id="295934" >
+          <span class="flex-row">
+            <span class='xs-hide sm-show'>Be the first to answer</span><span class='xs-show sm-hide'>Answer</span>
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-295934" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/product-management-student-survey-anonymous/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/product-management-student-survey-anonymous&amp;title=Short%20survey%20about%20Product%20Management%20for%20my%20master&#39;s%20program" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/product-management-student-survey-anonymous&amp;title=Short%20survey%20about%20Product%20Management%20for%20my%20master&#39;s%20program"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/product-management-student-survey-anonymous&amp;text=Short%20survey%20about%20Product%20Management%20for%20my%20master&#39;s%20program" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/product-management-student-survey-anonymous&amp;text=Short%20survey%20about%20Product%20Management%20for%20my%20master&#39;s%20program"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/product-management-student-survey-anonymous"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/separate-product-engineering-orgs">
+        <div id="11673114" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/lisa-schlecht-1">Lisa Schlecht</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/collaboration">Collaboration</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-04-09T18:50:25Z">6 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Separate Product and Engineering Orgs</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="11673114" data-question-slug="separate-product-engineering-orgs" data-comment-id="" data-replyable-id="11673114" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-11673114" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/separate-product-engineering-orgs/likes.js">
+    <span class="flex-row">
+        Like
+        <span class="divider"></span>
+        <span class="number">1</span>
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/separate-product-engineering-orgs&amp;title=Separate%20Product%20and%20Engineering%20Orgs" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/separate-product-engineering-orgs&amp;title=Separate%20Product%20and%20Engineering%20Orgs"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/separate-product-engineering-orgs&amp;text=Separate%20Product%20and%20Engineering%20Orgs" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/separate-product-engineering-orgs&amp;text=Separate%20Product%20and%20Engineering%20Orgs"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/separate-product-engineering-orgs"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/goal-framed-better">
+        <div id="16197023" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/shawn-gibson">Shawn Gibson</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/strategy">Strategy</a>
+    </li>
+    <li>4 replies</li>
+    <li><time class="timeago" datetime="2020-02-19T16:34:23Z">8 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Which goal is framed better? (and why?)</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="16197023" data-question-slug="goal-framed-better" data-comment-id="" data-replyable-id="16197023" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-16197023" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/goal-framed-better/likes.js">
+    <span class="flex-row">
+        Like
+        <span class="divider"></span>
+        <span class="number">1</span>
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/goal-framed-better&amp;title=Which%20goal%20is%20framed%20better?%20(and%20why?)" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/goal-framed-better&amp;title=Which%20goal%20is%20framed%20better?%20(and%20why?)"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/goal-framed-better&amp;text=Which%20goal%20is%20framed%20better?%20(and%20why?)" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/goal-framed-better&amp;text=Which%20goal%20is%20framed%20better?%20(and%20why?)"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/goal-framed-better"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/best-practice-using-activity-types-marketing-workspace">
+        <div id="5589858" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/hassan-el-hadidy">Hassan El-Hadidy</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/marketing">Marketing</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-03-30T02:42:31Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>What is the best practice of using activity types in an Aha! marketing workspace?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="5589858" data-question-slug="best-practice-using-activity-types-marketing-workspace" data-comment-id="" data-replyable-id="5589858" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-5589858" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/best-practice-using-activity-types-marketing-workspace/likes.js">
+    <span class="flex-row">
+        Like
+        <span class="divider"></span>
+        <span class="number">1</span>
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/best-practice-using-activity-types-marketing-workspace&amp;title=What%20is%20the%20best%20practice%20of%20using%20activity%20types%20in%20an%20Aha!%20marketing%20workspace?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/best-practice-using-activity-types-marketing-workspace&amp;title=What%20is%20the%20best%20practice%20of%20using%20activity%20types%20in%20an%20Aha!%20marketing%20workspace?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/best-practice-using-activity-types-marketing-workspace&amp;text=What%20is%20the%20best%20practice%20of%20using%20activity%20types%20in%20an%20Aha!%20marketing%20workspace?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/best-practice-using-activity-types-marketing-workspace&amp;text=What%20is%20the%20best%20practice%20of%20using%20activity%20types%20in%20an%20Aha!%20marketing%20workspace?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/best-practice-using-activity-types-marketing-workspace"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/change-promoted-idea-status">
+        <div id="11118411" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/hector-catre">Hector Catre</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-05-22T15:38:00Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>In Aha!, how to you select the Idea status of a promoted Idea from Planned to Future Consideration?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="11118411" data-question-slug="change-promoted-idea-status" data-comment-id="" data-replyable-id="11118411" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-11118411" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/change-promoted-idea-status/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/change-promoted-idea-status&amp;title=In%20Aha!,%20how%20to%20you%20select%20the%20Idea%20status%20of%20a%20promoted%20Idea%20from%20Planned%20to%20Future%20Consideration?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/change-promoted-idea-status&amp;title=In%20Aha!,%20how%20to%20you%20select%20the%20Idea%20status%20of%20a%20promoted%20Idea%20from%20Planned%20to%20Future%20Consideration?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/change-promoted-idea-status&amp;text=In%20Aha!,%20how%20to%20you%20select%20the%20Idea%20status%20of%20a%20promoted%20Idea%20from%20Planned%20to%20Future%20Consideration?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/change-promoted-idea-status&amp;text=In%20Aha!,%20how%20to%20you%20select%20the%20Idea%20status%20of%20a%20promoted%20Idea%20from%20Planned%20to%20Future%20Consideration?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/change-promoted-idea-status"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/sync-area-path-between-aha-azure-devops-ado">
+        <div id="10509232" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/ado-integration">ADO Integration</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/microsoft-azure-devops">Microsoft Azure DevOps</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-05-21T11:44:01Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Sync Area Path between Aha! and Azure DevOps (ADO)</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="10509232" data-question-slug="sync-area-path-between-aha-azure-devops-ado" data-comment-id="" data-replyable-id="10509232" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-10509232" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/sync-area-path-between-aha-azure-devops-ado/likes.js">
+    <span class="flex-row">
+        Like
+        <span class="divider"></span>
+        <span class="number">1</span>
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/sync-area-path-between-aha-azure-devops-ado&amp;title=Sync%20Area%20Path%20between%20Aha!%20and%20Azure%20DevOps%20(ADO)" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/sync-area-path-between-aha-azure-devops-ado&amp;title=Sync%20Area%20Path%20between%20Aha!%20and%20Azure%20DevOps%20(ADO)"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/sync-area-path-between-aha-azure-devops-ado&amp;text=Sync%20Area%20Path%20between%20Aha!%20and%20Azure%20DevOps%20(ADO)" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/sync-area-path-between-aha-azure-devops-ado&amp;text=Sync%20Area%20Path%20between%20Aha!%20and%20Azure%20DevOps%20(ADO)"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/sync-area-path-between-aha-azure-devops-ado"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/reviewers-create-master-activities">
+        <div id="10565718" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/william-lam">William Lam </a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-05-15T12:23:48Z">4 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Why can&#39;t reviewers create master activities?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="10565718" data-question-slug="reviewers-create-master-activities" data-comment-id="" data-replyable-id="10565718" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-10565718" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/reviewers-create-master-activities/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/reviewers-create-master-activities&amp;title=Why%20can&#39;t%20reviewers%20create%20master%20activities?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/reviewers-create-master-activities&amp;title=Why%20can&#39;t%20reviewers%20create%20master%20activities?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/reviewers-create-master-activities&amp;text=Why%20can&#39;t%20reviewers%20create%20master%20activities?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/reviewers-create-master-activities&amp;text=Why%20can&#39;t%20reviewers%20create%20master%20activities?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/reviewers-create-master-activities"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/midpoint-pm-career-advice">
+        <div id="7904704" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/david-dietrichs">David Dietrichs</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/careers">Careers</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-05-14T09:12:19Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>Midpoint in PM career: advice needed on progressing without leadership abilities (possibly a common question)</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="7904704" data-question-slug="midpoint-pm-career-advice" data-comment-id="" data-replyable-id="7904704" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-7904704" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/midpoint-pm-career-advice/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/midpoint-pm-career-advice&amp;title=Midpoint%20in%20PM%20career:%20advice%20needed%20on%20progressing%20without%20leadership%20abilities%20(possibly%20a%20common%20question)" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/midpoint-pm-career-advice&amp;title=Midpoint%20in%20PM%20career:%20advice%20needed%20on%20progressing%20without%20leadership%20abilities%20(possibly%20a%20common%20question)"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/midpoint-pm-career-advice&amp;text=Midpoint%20in%20PM%20career:%20advice%20needed%20on%20progressing%20without%20leadership%20abilities%20(possibly%20a%20common%20question)" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/midpoint-pm-career-advice&amp;text=Midpoint%20in%20PM%20career:%20advice%20needed%20on%20progressing%20without%20leadership%20abilities%20(possibly%20a%20common%20question)"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/midpoint-pm-career-advice"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/people-selecting-achieved-initiative-accidentally-archive-time">
+        <div id="5255829" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/karie-kelly">Karie Kelly</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-05-02T14:52:49Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>How do I keep people from selecting an achieved initiative accidentally without archive the time period?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="5255829" data-question-slug="people-selecting-achieved-initiative-accidentally-archive-time" data-comment-id="" data-replyable-id="5255829" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-5255829" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/people-selecting-achieved-initiative-accidentally-archive-time/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/people-selecting-achieved-initiative-accidentally-archive-time&amp;title=How%20do%20I%20keep%20people%20from%20selecting%20an%20achieved%20initiative%20accidentally%20without%20archive%20the%20time%20period?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/people-selecting-achieved-initiative-accidentally-archive-time&amp;title=How%20do%20I%20keep%20people%20from%20selecting%20an%20achieved%20initiative%20accidentally%20without%20archive%20the%20time%20period?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/people-selecting-achieved-initiative-accidentally-archive-time&amp;text=How%20do%20I%20keep%20people%20from%20selecting%20an%20achieved%20initiative%20accidentally%20without%20archive%20the%20time%20period?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/people-selecting-achieved-initiative-accidentally-archive-time&amp;text=How%20do%20I%20keep%20people%20from%20selecting%20an%20achieved%20initiative%20accidentally%20without%20archive%20the%20time%20period?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/people-selecting-achieved-initiative-accidentally-archive-time"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+      <article class="topic" data-link="/deleted-feature">
+        <div id="2558862" class="anchor"></div>
+        <ul class="topic-meta list-inline list-bullets">
+      <li class="topic-meta-type">
+          Question asked <span class="item-by">by <a class="handles-click topic-meta-user" href="/users/karie-kelly">Karie Kelly</a></span>
+      </li>
+    <li class="topic-category-link">
+          <a class="handles-click" href="/tools/aha">Aha!</a>
+    </li>
+    <li>1 reply</li>
+    <li><time class="timeago" datetime="2020-05-02T14:51:04Z">5 months ago</time></li>
+</ul>
+
+            <header class="topic-header">
+    <h1>How do I find out who deleted a feature?</h1>
+  </header>
+
+
+
+
+        <div class="topic-buttons flex-row">
+  <ul class="list-inline">
+      <li>
+        <button class="btn btn-primary reply handles-click" data-reply-type="home" data-question-id="2558862" data-question-slug="deleted-feature" data-comment-id="" data-replyable-id="2558862" >
+          <span class="flex-row">
+            Answer
+          </span>
+        </button>
+      </li>
+    <li>
+        <a id="btn-like-2558862" class="btn like handles-click " data-remote="true" rel="nofollow" data-method="post" href="/questions/deleted-feature/likes.js">
+    <span class="flex-row">
+        Like
+    </span>
+</a>
+    </li>
+  </ul>
+
+    <ul class="list-inline social-links flex-expand">
+      <li><a class="fa fa-linkedin-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/deleted-feature&amp;title=How%20do%20I%20find%20out%20who%20deleted%20a%20feature?" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.roadmap.com/deleted-feature&amp;title=How%20do%20I%20find%20out%20who%20deleted%20a%20feature?"></a></li>
+      <li><a class="fa fa-twitter-square social-link handles-click" target="_blank" rel="noopener noreferrer" data-link="http://twitter.com/intent/tweet?url=https://www.roadmap.com/deleted-feature&amp;text=How%20do%20I%20find%20out%20who%20deleted%20a%20feature?" href="http://twitter.com/intent/tweet?url=https://www.roadmap.com/deleted-feature&amp;text=How%20do%20I%20find%20out%20who%20deleted%20a%20feature?"></a></li>
+      <li><a href="#" class="fa fa-link clipboard-link handles-click" data-clipboard-text="https://www.roadmap.com/deleted-feature"></a></li>
+    </ul>
+</div>
+
+      </article>
+
+</div>
+
+<div class="pagination"><span class="previous_page disabled"><i class="fa fa-chevron-left"></i></span> <em class="current">1</em> <a rel="next" href="/?page=2">2</a> <a href="/?page=3">3</a> <a href="/?page=4">4</a> <a href="/?page=5">5</a> <a href="/?page=6">6</a> <a href="/?page=7">7</a> <a href="/?page=8">8</a> <a href="/?page=9">9</a> <span class="gap">&hellip;</span> <a href="/?page=38">38</a> <a href="/?page=39">39</a> <a class="next_page" rel="next" href="/?page=2"><i class="fa fa-chevron-right"></i></a></div>
+
+  </main>
+
+  <aside class="xs-hide md-show col-md-3 first-md section">
+    <div class="sticky">
+      <header class="flex-row">
+        <h2>Feed</h2>
+      </header>
+      <ul class="list-unstyled list-links feed-list">
+        <li class="active">
+          <a href="/questions/popular">Trending now</a>
+        </li>
+        <li class="">
+          <a href="/questions/recent">Recent questions</a>
+        </li>
+        <li class="">
+          <a href="/questions/recent_answers">Recent answers</a>
+        </li>
+        <li class="">
+          <a href="/questions/top">Most popular</a>
+        </li>
+          <li class="">
+            <a href="/questions/unanswered">Unanswered</a>
+          </li>
+      </ul>
+      <hr />
+
+      <header class="flex-row">
+        <h2>Topics</h2>
+      </header>
+      <ul class="list-unstyled list-links topic-list">
+        <li>
+          <a href="/">
+            <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-all">All</span>
+</a>        </li>
+          <li>
+            <a href="/careers">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-careers">Careers</span>
+</a>          </li>
+          <li>
+            <a href="/collaboration">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-collaboration">Collaboration</span>
+</a>          </li>
+          <li>
+            <a href="/ideas">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-ideas">Ideas</span>
+</a>          </li>
+          <li>
+            <a href="/launches">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-launches">Launches</span>
+</a>          </li>
+          <li>
+            <a href="/marketing">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-marketing">Marketing</span>
+</a>          </li>
+          <li>
+            <a href="/methodologies">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-methodologies">Methodologies</span>
+</a>          </li>
+          <li>
+            <a href="/releases">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-releases">Releases</span>
+</a>          </li>
+          <li>
+            <a href="/requirements">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-requirements">Requirements</span>
+</a>          </li>
+          <li>
+            <a href="/research">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-research">Research</span>
+</a>          </li>
+          <li>
+            <a href="/roadmaps">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-roadmaps">Roadmaps</span>
+</a>          </li>
+          <li>
+            <a href="/strategy">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-strategy">Strategy</span>
+</a>          </li>
+          <li>
+            <a href="/tools">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-tools">Tools</span>
+</a>          </li>
+          <li>
+            <a href="/ux">
+              <span class="roadmap-icon roadmap-icon-prefix roadmap-icon-ux">User experience</span>
+</a>          </li>
+      </ul>
+    </div>
+  </aside>
+</div>
+<div class="cta-banner">
+  <div class="cta-banner-content">
+    <div class="cta-banner-section">
+      <b>Join the conversation</b> &mdash; learn from thousands of product managers and product marketers.
+    </div>
+    <div class="cta-banner-section">
+      <a class="btn btn-cta" data-remote="true" href="/login?form=signup">Sign up now</a>
+    </div>
+  </div>
+
+  <div class="cta-banner-close fa fa-times"></div>
+</div>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.roadmap.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.roadmap.com/search/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+
+    </div>
+  </div>
+
+  <footer class="page-footer text-center">
+  <div class="container">
+    <div class="col-xs-12">
+      <ul class="list-inline list-bullets">
+        <li><a href="/participation">Participation</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="mailto:support@roadmap.com">Contact</a></li>
+      </ul>
+      <p class="page-footer-sponsored-by">
+        <a href="http://www.aha.io/?ref=roadmap.com">
+          Sponsored by <span class='aha'>Aha!</span>
+</a>      </p>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+      <div class="slider-overlay"></div>
+    </div>
+    <div id="modal-window" class="modal fade"></div>
+    
+    <div id="menu">
+    </div>
+    <span style="display: none;" itemscope itemtype="http://schema.org/Organization">
+      <link itemprop="url" href="http://www.roadmap.com">
+      <a itemprop="sameAs" href="https://www.linkedin.com/company/roadmap-com/">LinkedIn</a>
+      <a itemprop="sameAs" href="https://twitter.com/Roadmap_com">Twitter</a>
+      <a itemprop="sameAs" href="https://www.facebook.com/Roadmapcom/">Facebook</a>
+    </span>
+  </body>
+</html>
